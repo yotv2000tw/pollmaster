@@ -1,6 +1,9 @@
 import discord
+import os
+import dotenv
+from dotenv import load_dotenv
 
-from essentials.secrets import SECRETS
+from pollmaster.essentials.secrets import SECRETS
 
 
 class Settings:
@@ -19,10 +22,11 @@ class Settings:
 
     def load_secrets(self):
         # secret
-        self.dbl_token = SECRETS.dbl_token
-        self.mongo_db = SECRETS.mongo_db
-        self.bot_token = SECRETS.bot_token
-        self.mode = SECRETS.mode
+        load_dotenv()
+        self.dbl_token = os.getenv('DBL_TOKEN')
+        self.mongo_db = os.getenv('MONGO_DB')
+        self.bot_token = os.getenv('BOT_TOKEN')
+        self.mode = os.getenv('MODE')
 
 
 SETTINGS = Settings()
