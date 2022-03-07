@@ -1,8 +1,6 @@
 import discord
 import os
 
-from pollmaster.essentials.secrets import SECRETS
-
 
 class Settings:
     def __init__(self):
