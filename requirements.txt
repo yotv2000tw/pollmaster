@@ -29,5 +29,3 @@ Unidecode==1.1.1
 urllib3==1.25.11
 websockets==8.1
 yarl==1.4.2
-flask
-dotenv
